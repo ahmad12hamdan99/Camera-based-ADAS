@@ -8,3 +8,7 @@ In this project I am focusing on the following tasks:
 2. Detecting other vehicles : YOLO will be used for this task, no modification will be made as it already trained on class cars.
 3. Tracking other vehicles: for this task [Deep Sort](https://github.com/nwojke/deep_sort) will be used which is based on [Simple Online and Realtime Tracking with a Deep Association Metric](https://arxiv.org/abs/1703.07402) 
 
+
+## Time:
+
+
