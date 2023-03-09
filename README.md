@@ -6,5 +6,5 @@ ADAS (Advanced Driver Assistance Systems) are passive and active safety systems 
 In this project I am focusing on the following tasks: 
 1. Advanced lane finding 
 2. Detecting other vehicles 
-3. tracking other vehicles 
+3. Tracking other vehicles: For this task [Deep Sort] (https://github.com/nwojke/deep_sort) will be used which is based on [Simple Online and Realtime Tracking with a Deep Association Metric] (https://arxiv.org/abs/1703.07402) 
 
