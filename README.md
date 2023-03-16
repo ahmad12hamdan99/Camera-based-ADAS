@@ -18,11 +18,12 @@ The output result of the first step is expected to be as follows:
 ---
 
 ## Time:
-|#weeks |Task           |
-|---	|---	        |
-|   2	|   	        |
-|   	|   	        |
-|   	|   	        |
+|#Weeks |Task                               |
+|---	|---	                            |
+|   2	|Advanced lane finding   	        |
+|   1	|Vehicle Detection   	            |
+|   1	|Vehicle Tracking         	        |
+|   1   |Front Collision Warning            |
 
 
 
