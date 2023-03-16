@@ -24,6 +24,7 @@ The output result of the first step is expected to be as follows:
 |   1	|Vehicle Detection   	            |
 |   1	|Vehicle Tracking         	        |
 |   1   |Front Collision Warning            |
+|   2   |Merging all modules together       |
 
 
 
