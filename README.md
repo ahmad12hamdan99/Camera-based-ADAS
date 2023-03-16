@@ -1,6 +1,6 @@
 # Camera-based-ADAS
 This project is a part of Computer Vision course at Innopolis University - Spring 23
-
+---
 ## Idea: 
 ADAS (Advanced Driver Assistance Systems) are passive and active safety systems designed to remove the human error component when operating vehicles of many types. 
 In this project I am focusing on the following tasks: 
@@ -13,7 +13,7 @@ The output result of the first step is expected to be as follows:
 
 4. The possibilty of calculating the distance to other cars will be interesting to study in order to implement a front-collision warning.
 
-
+---
 ## Time:
 
 
