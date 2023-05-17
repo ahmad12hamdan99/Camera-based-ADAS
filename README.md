@@ -55,3 +55,8 @@ we applied the classical lane detection and cars detection and tracking two test
 The HybridNets neural network was introduced by VT Dat et al. in the paper [HybridNets: End-to-End Perception Network](https://arxiv.org/abs/2203.09035). This is a multi-task neural network that can carry out end-to-end visual perception. In other words, this neural network can do both, detection, and segmentation.
 
 ### Why Are Multi-Task Neural Networks Important?
+The big question here is “why do we need such a neural network?”. In autonomous driving, the visual perception neural network does multiple tasks. It has a complex structure for detecting humans, other vehicles, and the drivable area, and does a myriad of other challenging yet safety-critical tasks.
+
+Such tasks cannot be achieved by a simple linear neural network that does just classification, detection, or segmentation. We need neural networks that can multitask. Hence, the term end-to-end multi-task visual perception.
+
+he HybridNets neural network has a major significance in autonomous driving where end-to-end visual perception is critical and speed of computation is also paramount. It does traffic object detection, drivable area segmentation, and lane detection (segmentation) as well.
