@@ -15,7 +15,8 @@ In this project we are focusing on the following tasks:
 detect lane lines from an image using sobel filter and color thresholding. and then use sliding window to fit the detected lines
 ### 1. Slice fixed regieon form the image where the lane is expected to be:
 ![alt text](https://github.com/ahmad12hamdan99/Camera-based-ADAS/blob/main/figs/classical_1.jpg) 
-### 2.Transforming an image such that we are effectively viewing objects from a different angle or direction. so we convert the image to BEV perspective or top-down view of the road so we can measure the curvature of a lane line
+### 2. Convert to BEV: 
+Transforming an image such that we are effectively viewing objects from a different angle or direction. so we convert the image to BEV perspective or top-down view of the road so we can measure the curvature of a lane line
 ![alt text](https://github.com/ahmad12hamdan99/Camera-based-ADAS/blob/main/figs/classical_2.jpg) 
 ### 3.Detect lane border:
 ![alt text](https://github.com/ahmad12hamdan99/Camera-based-ADAS/blob/main/figs/classical_3.jpg) 
@@ -23,7 +24,8 @@ After finding the BEV of the area of interest in the image we want to detect lan
 we will use to find these lines:
 1.Edges
 2.Color
-#### 4.1 Using edges: applying sobel filter 
+#### 4.1 Using edges: 
+applying sobel-x filter to detect lanes border as the lanes are always vertical in the considered images
 ![alt text](https://github.com/ahmad12hamdan99/Camera-based-ADAS/blob/main/figs/classical_4.jpg) 
 #### 4.2 Using Color thresholding: 
 Hue is a property of color that remains constant regardless of changes in brightness, while Lightness and Value measure the degree of lightness or darkness of a color. Saturation, on the other hand, measures the intensity or vividness of color. In order to identify lane lines in various lighting scenarios, including shadowed areas, We used the cv2.cvtColor() function with the COLOR_RGB2HLS argument to isolate the saturation channel.And to improve the accuracy,  We combined the saturation and lightness channels and applied a binary threshold to select pixels within specific ranges (120-255 for saturation and 200-255 for lightness). This resulted in accurate detection of the white dashed lines as lane markers.
@@ -45,3 +47,5 @@ We calculated  the lane lines curvature and the centre offset of vehicle within 
 We used YOLOv8 algorithm to detect four classes:car, motorcycle, bus and truck . (we used pretrained yolov8x)
 ### 3. Track viechels using ByteTrack :
 ByteTrack is a simple, fast and strong multi-object tracker.it use simple, effective and generic association method, tracking by associating every detection box instead of only the high score ones. For the low score detection boxes, it utilize their similarities with tracklets to recover true objects and filter out the background detections.
+### 4. Videos :
+we applied the classical lane detection and cars detection and tracking two test videos.
