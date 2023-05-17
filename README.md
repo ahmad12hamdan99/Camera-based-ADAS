@@ -55,7 +55,3 @@ we applied the classical lane detection and cars detection and tracking two test
 The HybridNets neural network was introduced by VT Dat et al. in the paper [HybridNets: End-to-End Perception Network](https://arxiv.org/abs/2203.09035). This is a multi-task neural network that can carry out end-to-end visual perception. In other words, this neural network can do both, detection, and segmentation.
 
 ### Why Are Multi-Task Neural Networks Important?
-
-
-
-
