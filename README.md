@@ -74,6 +74,23 @@ The HybridNet neural network consists of an encoder and two different heads (dec
 The encoder consists of the backbone and neck. And one decoder is for detection, and the other for segmentation.
 ![alt text](figs/hybrid_net.png) 
 
+### Multi-Task Performance Results
+HybridNets is not the only or the first multi-task neural network. There are a few others and drawing comparisons with them is pretty important. Because of that, the authors compare their HybridNets model with 5 other models which have also been trained on the BDD100K dataset. These models were trained for traffic object detection. The following figure (table 2 from the paper) shows the results.
+![img](figs/hybridnets-multi-task-performance-comparison.png)
+It is pretty clear that at 0.50 IoU, the HybridNets is ahead of others with 77.3 mAP. Not only that, the HybridNets model can detect incredibly small objects between 3 to 10 pixels. The following are some of the results from the paper, that too in challenging night-time conditions.
+![img](figs/hybridnets-night-time-result-1.png)
+
+
+### Drivable Area Segmentation Performance
+![img](figs/hybridnets-drivable-area-segmentation-performance.png)
+
+
+### Results for Lane Detection (Segmentation)
+With an accuracy of 85.4% and IoU of 31.6%, the HybridNets model outperforms all other models on the same task.
+![img](figs/hybridnets-lane-detection-results.png)
+![img](figs/hybridnets-lane-detection.png)
+
+From the above figure, it is clear that even for lane detection, the HybridNets model is performing well during both day and night time.
 
 ### Video 
 ![GIF](imgs/hybrid_best.gif) 
