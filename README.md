@@ -54,7 +54,6 @@ We used YOLOv8 algorithm to detect four classes:car, motorcycle, bus and truck .
 ByteTrack is a simple, fast and strong multi-object tracker.it use simple, effective and generic association method, tracking by associating every detection box instead of only the high score ones. For the low score detection boxes, it utilize their similarities with tracklets to recover true objects and filter out the background detections.
 ### 4. Videos :
 we applied the classical lane detection and cars detection and tracking two test videos.
-[<img src="figs/yolo.png" width="50%">](imgs/test.mp4")
 
 
 ## HybridNets
