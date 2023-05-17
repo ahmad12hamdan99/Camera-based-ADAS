@@ -36,7 +36,7 @@ We took only the down-half of the image where the lane expected to be more visib
 we used fixed size  window and moved it vertically starting form the expect position  of the left lane inthe image and counted the number of points in each window , find its center, and then we did polyfit with second order polynomial on these centers to find the left lane. we did the same procedure for the right lane.
 ![alt text](figs/classical_6.png) 
 #### 7 Find lane search region:
-we found a region limits around the detected lane and use it for search in the next frame 
+Once we have used the sliding windows function and detected lane lines and right and left lane indicies, we can return these values for the next frame in the video to search around for lane lines based on activated x-values within the +/- margin of our polynomial function.
 ![alt text](figs/classical_7.png) 
 #### 8 lane curvature and offset form the center of the lane:
 We calculated  the lane lines curvature and the centre offset of vehicle within lane assuming camera is mounted directly in the middle centreline of vehicle
