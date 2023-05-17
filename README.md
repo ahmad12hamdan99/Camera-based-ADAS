@@ -65,3 +65,9 @@ The big question here is “why do we need such a neural network?”. In autonom
 Such tasks cannot be achieved by a simple linear neural network that does just classification, detection, or segmentation. We need neural networks that can multitask. Hence, the term end-to-end multi-task visual perception.
 
 he HybridNets neural network has a major significance in autonomous driving where end-to-end visual perception is critical and speed of computation is also paramount. It does traffic object detection, drivable area segmentation, and lane detection (segmentation) as well.
+
+### The HybridNets Network Architecture
+The HybridNet neural network consists of an encoder and two different heads (decoders) for multitasking.
+
+The encoder consists of the backbone and neck. And one decoder is for detection, and the other for segmentation.
+![alt text](figs/hybrid_net.png) 
