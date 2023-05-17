@@ -72,3 +72,7 @@ The HybridNet neural network consists of an encoder and two different heads (dec
 
 The encoder consists of the backbone and neck. And one decoder is for detection, and the other for segmentation.
 ![alt text](figs/hybrid_net.png) 
+
+
+### Video 
+![GIF](imgs/hybrid_best.gif) 
