@@ -19,19 +19,19 @@ detect lane lines from an image using sobel filter and color thresholding. and t
 Transforming an image such that we are effectively viewing objects from a different angle or direction. so we convert the image to BEV perspective or top-down view of the road so we can measure the curvature of a lane line
 ![alt text](figs/classical_2.png) 
 ### 3.Detect lane border:
-![alt text](figs/classical_3.png) 
 After finding the BEV of the area of interest in the image we want to detect lane border.
 we will use to find these lines:
-1.Edges
-2.Color
+1. Edges
+2. Color
 #### 4.1 Using edges: 
 applying sobel-x filter to detect lanes border as the lanes are always vertical in the considered images
-![alt text](figs/classical_4.png) 
+![alt text](figs/classical_3.png) 
 #### 4.2 Using Color thresholding: 
 Hue is a property of color that remains constant regardless of changes in brightness, while Lightness and Value measure the degree of lightness or darkness of a color. Saturation, on the other hand, measures the intensity or vividness of color. In order to identify lane lines in various lighting scenarios, including shadowed areas, We used the cv2.cvtColor() function with the COLOR_RGB2HLS argument to isolate the saturation channel.And to improve the accuracy,  We combined the saturation and lightness channels and applied a binary threshold to select pixels within specific ranges (120-255 for saturation and 200-255 for lightness). This resulted in accurate detection of the white dashed lines as lane markers.
-![alt text](figs/classical_5.png) 
+![alt text](figs/classical_4.png) 
 #### 5 Find the vertical histogram: 
 We took only the down-half of the image where the lane expected to be more visible, then we found the vertical histogram by suming the pixles in each colnum. And this histogram will give picks on the position of the lanes. and by thresholding this histogram we got the potential position for the start of left and right lanes.
+![alt text](figs/classical_5.png) 
 #### 6 Using sliding window to find the point of the lanes:
 we used fixed size  window and moved it vertically starting form the expect position  of the left lane inthe image and counted the number of points in each window , find its center, and then we did polyfit with second order polynomial on these centers to find the left lane. we did the same procedure for the right lane.
 ![alt text](figs/classical_6.png) 
