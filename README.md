@@ -48,6 +48,8 @@ We calculated  the lane lines curvature and the centre offset of vehicle within 
 
 ### 2. Detecting other vehicles :
 We used YOLOv8 algorithm to detect four classes:car, motorcycle, bus and truck . (we used pretrained yolov8x)
+![alt text](figs/yolo.png) 
+
 ### 3. Track viechels using ByteTrack :
 ByteTrack is a simple, fast and strong multi-object tracker.it use simple, effective and generic association method, tracking by associating every detection box instead of only the high score ones. For the low score detection boxes, it utilize their similarities with tracklets to recover true objects and filter out the background detections.
 ### 4. Videos :
