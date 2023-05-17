@@ -51,3 +51,8 @@ ByteTrack is a simple, fast and strong multi-object tracker.it use simple, effec
 we applied the classical lane detection and cars detection and tracking two test videos.
 
 
+## HybridNets
+The HybridNets neural network was introduced by VT Dat et al. in the paper HybridNets: End-to-End Perception Network. This is a multi-task neural network that can carry out end-to-end visual perception. In other words, this neural network can do both, detection, and segmentation.
+
+
+
