@@ -29,7 +29,7 @@ applying sobel-x filter to detect lanes border as the lanes are always vertical 
 ![alt text](figs/classical_4.png) 
 #### 4.2 Using Color thresholding: 
 Hue is a property of color that remains constant regardless of changes in brightness, while Lightness and Value measure the degree of lightness or darkness of a color. Saturation, on the other hand, measures the intensity or vividness of color. In order to identify lane lines in various lighting scenarios, including shadowed areas, We used the cv2.cvtColor() function with the COLOR_RGB2HLS argument to isolate the saturation channel.And to improve the accuracy,  We combined the saturation and lightness channels and applied a binary threshold to select pixels within specific ranges (120-255 for saturation and 200-255 for lightness). This resulted in accurate detection of the white dashed lines as lane markers.
-![alt text](figs/classical_5.jpg) 
+![alt text](figs/classical_5.png) 
 #### 5 Find the vertical histogram: 
 We took only the down-half of the image where the lane expected to be more visible, then we found the vertical histogram by suming the pixles in each colnum. And this histogram will give picks on the position of the lanes. and by thresholding this histogram we got the potential position for the start of left and right lanes.
 #### 6 Using sliding window to find the point of the lanes:
@@ -52,7 +52,10 @@ we applied the classical lane detection and cars detection and tracking two test
 
 
 ## HybridNets
-The HybridNets neural network was introduced by VT Dat et al. in the paper HybridNets: End-to-End Perception Network. This is a multi-task neural network that can carry out end-to-end visual perception. In other words, this neural network can do both, detection, and segmentation.
+The HybridNets neural network was introduced by VT Dat et al. in the paper [HybridNets: End-to-End Perception Network](https://arxiv.org/abs/2203.09035). This is a multi-task neural network that can carry out end-to-end visual perception. In other words, this neural network can do both, detection, and segmentation.
+
+### Why Are Multi-Task Neural Networks Important?
+
 
 
 
